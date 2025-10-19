@@ -13,6 +13,13 @@
     font-style: swap;
 }
 
+@font-face {
+    font-family: 'robotomono-italic-variablefont_wght.woff2';
+    src: url('../fonts/robotomono-italic-variablefont_wght.woff2') format('woff2');
+    font-weight: normal;
+    font-style: swap;
+}
+
 body {
     font-family: 'EB Garamond', serif; /* Elegant serif font for a medieval feel */
     background-color: #f4f1e0; /* Parchment-like background */
@@ -198,6 +205,11 @@ h2 {
     max-width: 800px;
     margin: 40px auto;
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+}
+/* About section uses Roboto Mono Italic Variable font */
+#about {
+    font-family: 'robotomono-italic-variablefont_wght', monospace;
+    font-style: italic;
 }
 
 /* Footer */
