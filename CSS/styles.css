@@ -6,6 +6,13 @@
     font-style: swap;
 }
 
+@font-face {
+    font-family: 'unifrankturMaguntia';
+    src: url('../fonts/unifrankturMaguntia-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
 body {
     font-family: 'EB Garamond', serif; /* Elegant serif font for a medieval feel */
     background-color: #f4f1e0; /* Parchment-like background */
@@ -173,6 +180,11 @@ h2 {
     text-align: center;
     text-shadow: 2px 2px #4b2e2e; /* Subtle shadow for medieval feel */
     margin-bottom: 20px;
+}
+
+.poem-title {
+    font-family: 'unifrankturMaguntia', serif;
+    font-size: 2.2rem;
 }
 
 /* About Section */
