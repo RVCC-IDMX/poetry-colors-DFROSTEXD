@@ -1,4 +1,11 @@
 /* General Styles */
+@font-face {
+    font-family: 'MedievalSharp';
+    src: url('../fonts/MedievalSharp-Regular.woff2') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
 body {
     font-family: 'EB Garamond', serif; /* Elegant serif font for a medieval feel */
     background-color: #f4f1e0; /* Parchment-like background */
