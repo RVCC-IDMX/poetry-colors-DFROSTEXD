@@ -1,0 +1,260 @@
+/* General Styles */
+@font-face {
+    font-family: 'MedievalSharp';
+    src: url('../fonts/MedievalSharp-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: swap;
+}
+
+@font-face {
+    font-family: 'unifrankturMaguntia';
+    src: url('../fonts/unifrankturMaguntia-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: swap;
+}
+
+@font-face {
+    font-family: 'robotomono-italic-variablefont_wght.woff2';
+    src: url('../fonts/robotomono-italic-variablefont_wght.woff2') format('woff2');
+    font-weight: normal;
+    font-style: swap;
+}
+
+body {
+    font-family: 'EB Garamond', serif; /* Elegant serif font for a medieval feel */
+    background-color: #f4f1e0; /* Parchment-like background */
+    color: #4b2e2e; /* Dark brown text */
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    font-size: clamp(0.9rem, 2vw, 1.1rem);
+}
+
+header {
+    background-color: #6b4226; /* Rich brown for header */
+    color: #f4f1e0; /* Light text */
+    text-align: center;
+    padding: 20px;
+    border-bottom: 5px solid #4b2e2e;
+}
+
+header h1 {
+    font-family: 'MedievalSharp', cursive; /* Decorative medieval font */
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
+    margin: 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #f4f1e0;
+    font-weight: bold;
+}
+
+main {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Image Styles */
+img {
+    max-width: 50%; /* Half the size */
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+img:hover {
+    transform: scale(1.05);
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.4);
+}
+
+.image-container {
+    text-align: center;
+    margin: 20px 0;
+    background-color: #fff8dc; /* Light parchment color */
+    border: 2px solid #4b2e2e; /* Decorative border */
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
+}
+
+.image-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin: 20px 0;
+}
+
+.gallery-item {
+    background-color: #fff8dc; /* Light parchment color */
+    border: 2px solid #4b2e2e; /* Decorative border */
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover {
+    transform: translateY(-5px);
+}
+
+.image-caption {
+    font-family: 'EB Garamond', serif;
+    font-style: italic;
+    color: #4b2e2e;
+    margin-top: 10px;
+    font-size: clamp(0.9rem, 2vw, 1rem);
+    line-height: 1.4;
+}
+
+.featured-image {
+    max-width: 300px; /* Half of original 600px */
+    margin: 20px auto;
+    display: block;
+}
+
+/* Poem with Image Layout */
+.poem-with-image {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+    max-width: 1000px;
+    margin: 20px auto;
+    width: 100%;
+    justify-content: center;
+}
+
+.poem-text {
+    flex: 1;
+    background-color: #fff8dc;
+    border: 2px solid #4b2e2e;
+    border-radius: 10px;
+    padding: 20px;
+    font-family: 'MedievalSharp', cursive;
+    font-size: clamp(1rem, 2.5vw, 1.1rem);
+    line-height: 1.8;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+    text-align: justify;
+}
+
+.poem-image {
+    flex: 0 0 250px; /* Fixed width for image container */
+    margin-top: 0;
+}
+
+/* Poem Section */
+.poem-container {
+    background-color: #fff8dc; /* Light parchment color */
+    border: 2px solid #4b2e2e; /* Decorative border */
+    border-radius: 10px;
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    font-family: 'MedievalSharp', cursive;
+    font-size: clamp(1rem, 2.5vw, 1.1rem);
+    line-height: 1.8;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
+    text-align: justify;
+}
+
+.poem-container p {
+    margin-bottom: 20px;
+}
+
+.poem-container p:last-child {
+    margin-bottom: 0;
+}
+
+.poem-container br {
+    line-height: 2; /* Adds spacing between lines for better readability */
+}
+
+/* Section Titles */
+h2 {
+    font-family: 'MedievalSharp', cursive;
+    text-align: center;
+    text-shadow: 2px 2px #4b2e2e; /* Subtle shadow for medieval feel */
+    margin-bottom: 20px;
+    font-size: clamp(1.5rem, 3vw, 2rem);
+}
+
+.poem-title {
+    font-family: 'unifrankturMaguntia', serif;
+    font-size: clamp(1.8rem, 4vw, 2.2rem);
+}
+
+/* About Section */
+#about {
+    background-color: #fff8dc;
+    border: 2px solid #4b2e2e;
+    border-radius: 10px;
+    padding: 20px;
+    max-width: 800px;
+    margin: 40px auto;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+}
+/* About section uses Roboto Mono Italic Variable font */
+#about {
+    font-family: 'robotomono-italic-variablefont_wght', monospace;
+    font-style: italic;
+}
+
+/* Footer */
+footer {
+    background-color: #6b4226;
+    color: #f4f1e0;
+    text-align: center;
+    padding: 10px;
+    border-top: 5px solid #4b2e2e;
+}
+
+footer section {
+    margin-bottom: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .poem-container {
+        padding: 15px;
+    }
+
+    .image-gallery {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .featured-image {
+        max-width: 100%;
+    }
+
+    .poem-with-image {
+        flex-direction: column;
+    }
+
+    .poem-image {
+        flex: none;
+        align-self: center;
+    }
+
+    img {
+        max-width: 70%; /* Slightly larger on mobile */
+    }
+}
