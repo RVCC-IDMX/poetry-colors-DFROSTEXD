@@ -1,4 +1,24 @@
 /* General Styles */
+:root {
+    /* Primary palette */
+    --primary: hsl(25, 48%, 29%); /* header/footer background */
+    --primary-dark: hsl(12, 27%, 23%); /* dark brown border/text/shadow */
+    --primary-light: hsl(43, 100%, 93%); /* parchment surface */
+
+    /* Text colors */
+    --text: hsl(12, 27%, 23%); /* main text */
+    --text-inverse: hsl(48, 56%, 92%); /* light text on dark */
+    --text-muted: hsl(12, 27%, 40%); /* slightly lighter brown for muted text */
+
+    /* Backgrounds */
+    --background: hsl(48, 56%, 92%); /* page background */
+    --surface: hsl(43, 100%, 93%); /* card/surface background */
+
+    /* Shadows */
+    --shadow: hsla(0, 0%, 0%, 0.2);
+    --shadow-strong: hsla(0, 0%, 0%, 0.3);
+    --shadow-stronger: hsla(0, 0%, 0%, 0.4);
+}
 @font-face {
     font-family: 'MedievalSharp';
     src: url('../fonts/MedievalSharp-Regular.woff2') format('woff2');
@@ -22,8 +42,8 @@
 
 body {
     font-family: 'EB Garamond', serif; /* Elegant serif font for a medieval feel */
-    background-color: #f4f1e0; /* Parchment-like background */
-    color: #4b2e2e; /* Dark brown text */
+    background-color: hsl(48, 56%, 92%); /* Parchment-like background (#f4f1e0) */
+    color: hsl(12, 27%, 23%); /* Dark brown text (#4b2e2e) */
     margin: 0;
     padding: 0;
     line-height: 1.6;
@@ -31,11 +51,11 @@ body {
 }
 
 header {
-    background-color: #6b4226; /* Rich brown for header */
-    color: #f4f1e0; /* Light text */
+    background-color: hsl(25, 48%, 29%); /* Rich brown for header (#6b4226) */
+    color: hsl(48, 56%, 92%); /* Light text (#f4f1e0) */
     text-align: center;
     padding: 20px;
-    border-bottom: 5px solid #4b2e2e;
+    border-bottom: 5px solid hsl(12, 27%, 23%);
 }
 
 header h1 {
@@ -55,7 +75,7 @@ nav ul {
 
 nav a {
     text-decoration: none;
-    color: #f4f1e0;
+    color: hsl(48, 56%, 92%);
     font-weight: bold;
 }
 
@@ -71,23 +91,23 @@ img {
     max-width: 50%; /* Half the size */
     height: auto;
     border-radius: 8px;
-    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 3px 3px 10px hsla(0, 0%, 0%, 0.2);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 img:hover {
     transform: scale(1.05);
-    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.4);
+    box-shadow: 5px 5px 15px hsla(0, 0%, 0%, 0.4);
 }
 
 .image-container {
     text-align: center;
     margin: 20px 0;
-    background-color: #fff8dc; /* Light parchment color */
-    border: 2px solid #4b2e2e; /* Decorative border */
+    background-color: hsl(43, 100%, 93%); /* Light parchment color (#fff8dc) */
+    border: 2px solid hsl(12, 27%, 23%); /* Decorative border (#4b2e2e) */
     border-radius: 10px;
     padding: 15px;
-    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
+    box-shadow: 5px 5px 15px hsla(0, 0%, 0%, 0.3); /* Subtle shadow for depth */
 }
 
 .image-gallery {
@@ -98,12 +118,12 @@ img:hover {
 }
 
 .gallery-item {
-    background-color: #fff8dc; /* Light parchment color */
-    border: 2px solid #4b2e2e; /* Decorative border */
+    background-color: hsl(43, 100%, 93%); /* Light parchment color (#fff8dc) */
+    border: 2px solid hsl(12, 27%, 23%); /* Decorative border (#4b2e2e) */
     border-radius: 10px;
     padding: 15px;
     text-align: center;
-    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+    box-shadow: 3px 3px 10px hsla(0, 0%, 0%, 0.2); /* Subtle shadow for depth */
     transition: transform 0.3s ease;
 }
 
@@ -114,7 +134,7 @@ img:hover {
 .image-caption {
     font-family: 'EB Garamond', serif;
     font-style: italic;
-    color: #4b2e2e;
+    color: hsl(12, 27%, 23%);
     margin-top: 10px;
     font-size: clamp(0.9rem, 2vw, 1rem);
     line-height: 1.4;
@@ -139,14 +159,14 @@ img:hover {
 
 .poem-text {
     flex: 1;
-    background-color: #fff8dc;
-    border: 2px solid #4b2e2e;
+    background-color: hsl(43, 100%, 93%);
+    border: 2px solid hsl(12, 27%, 23%);
     border-radius: 10px;
     padding: 20px;
     font-family: 'MedievalSharp', cursive;
     font-size: clamp(1rem, 2.5vw, 1.1rem);
     line-height: 1.8;
-    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+    box-shadow: 5px 5px 15px hsla(0, 0%, 0%, 0.3);
     text-align: justify;
 }
 
@@ -157,8 +177,8 @@ img:hover {
 
 /* Poem Section */
 .poem-container {
-    background-color: #fff8dc; /* Light parchment color */
-    border: 2px solid #4b2e2e; /* Decorative border */
+    background-color: hsl(43, 100%, 93%); /* Light parchment color (#fff8dc) */
+    border: 2px solid hsl(12, 27%, 23%); /* Decorative border (#4b2e2e) */
     border-radius: 10px;
     padding: 20px;
     max-width: 800px;
@@ -166,7 +186,7 @@ img:hover {
     font-family: 'MedievalSharp', cursive;
     font-size: clamp(1rem, 2.5vw, 1.1rem);
     line-height: 1.8;
-    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
+    box-shadow: 5px 5px 15px hsla(0, 0%, 0%, 0.3); /* Subtle shadow for depth */
     text-align: justify;
 }
 
@@ -186,7 +206,7 @@ img:hover {
 h2 {
     font-family: 'MedievalSharp', cursive;
     text-align: center;
-    text-shadow: 2px 2px #4b2e2e; /* Subtle shadow for medieval feel */
+    text-shadow: 2px 2px hsl(12, 27%, 23%); /* Subtle shadow for medieval feel (#4b2e2e) */
     margin-bottom: 20px;
     font-size: clamp(1.5rem, 3vw, 2rem);
 }
@@ -198,13 +218,13 @@ h2 {
 
 /* About Section */
 #about {
-    background-color: #fff8dc;
-    border: 2px solid #4b2e2e;
+    background-color: hsl(43, 100%, 93%);
+    border: 2px solid hsl(12, 27%, 23%);
     border-radius: 10px;
     padding: 20px;
     max-width: 800px;
     margin: 40px auto;
-    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+    box-shadow: 5px 5px 15px hsla(0, 0%, 0%, 0.3);
 }
 /* About section uses Roboto Mono Italic Variable font */
 #about {
@@ -214,11 +234,11 @@ h2 {
 
 /* Footer */
 footer {
-    background-color: #6b4226;
-    color: #f4f1e0;
+    background-color: hsl(25, 48%, 29%);
+    color: hsl(48, 56%, 92%);
     text-align: center;
     padding: 10px;
-    border-top: 5px solid #4b2e2e;
+    border-top: 5px solid hsl(12, 27%, 23%);
 }
 
 footer section {
